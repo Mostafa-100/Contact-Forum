@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/9e56a67cbb.js" crossorigin="anonymous" defer></script>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="form">
+        <h2 class="form__heading">Send us Message</h2>
+        <hr>
+        <form action="main.php" method="post" class="form__fields">
+            <div class="form__fields-container">
+                <div class="form__input-box">
+                    <input type="text" placeholder="Enter your name" name="name" id="input-name">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="form__input-box">
+                    <input type="text" placeholder="Enter your email" name="email" id="input-email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="form__input-box">
+                    <input type="text" placeholder="Enter your phone" name="phone" id="input-phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="form__input-box">
+                    <input type="text" placeholder="Enter your website" name="website" id="input-website">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="form__textarea-box">
+                    <textarea placeholder="Write your message" id="message-area" name="message"></textarea>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </div>
+            </div>
+            <input type="submit" value="Send Message" class="form__send-button" id="send-button">
+            <span id="status-message" class="form__status-message">Sending your message...</span>
+        </form>
+    </div>
+</body>
+
+</html>

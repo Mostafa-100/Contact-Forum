@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+:root {
+    --blue: #0d6dfc;
+    --gray: #bfbfbf;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form {
+    flex-basis: 700px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.form__heading {
+    padding: 20px;
+}
+
+.form__fields {
+    padding: 30px;
+}
+
+.form__fields-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form__textarea-box {
+    grid-column: span 2;
+}
+
+.form__input-box,
+.form__textarea-box {
+    position: relative;
+}
+
+.form__input-box {
+    height: 50px;
+}
+
+.form__input-box input,
+.form__textarea-box textarea {
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding-left: 40px;
+    font-size: 1rem;
+}
+
+.form__textarea-box textarea {
+    max-width: 100%;
+    padding: 15px 15px 15px 40px;
+    min-height: 145px;
+    max-height: 170px;
+}
+
+.form__input-box i,
+.form__textarea-box i {
+    position: absolute;
+    pointer-events: none;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+.form__input-box i {
+    top: 50%;
+    left: 17px;
+    transform: translateY(-50%);
+}
+
+.form__textarea-box i {
+    top: 17px;
+    left: 17px;
+}
+
+.form__input-box input:focus,
+.form__textarea-box textarea:focus {
+    border: 2px solid var(--blue);
+}
+
+.form__input-box input:focus+i,
+.form__textarea-box textarea:focus+i {
+    color: var(--blue);
+}
+
+.form__send-button {
+    border: none;
+    padding: 15px 20px;
+    color: #fff;
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin-top: 1.8em;
+    cursor: pointer;
+    transition: 0.2s background-color;
+}
+
+.form__send-button:hover {
+    background-color: #015feb;
+}
+
+.form__status-message {
+    display: none;
+    margin-left: 10px;
+    color: #0d6dfc;
+}
